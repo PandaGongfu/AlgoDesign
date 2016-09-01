@@ -39,9 +39,6 @@ class dgraph:
 
 def DFS_loop(G, firstpass=True):
     for s in G.vertices:
-        G.count += 1
-        if G.count % 200 == 0:
-            print('progress! %d\n' % G.count)
         if not G.explored[s]:
             if not firstpass:
                 G.current_leader = s
