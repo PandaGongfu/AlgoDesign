@@ -20,7 +20,7 @@ class dgraph:
         lines = fh.read().split('\n')
         graph = {}
         vertices = []
-        for l in lines[:1000000]:
+        for l in lines[:]:
             edge_arr = [int(x) for x in l.split(' ')[:-1]]
             if reverse:
                 edge_arr = edge_arr[::-1]
