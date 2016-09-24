@@ -53,13 +53,7 @@ for m in range(2, ncities):
     del A
     A = defaultdict(list)
 
-    print('m= ', m)
-    print('len= ', len(S))
-    count = 0
     for s in S:
-        count += 1
-        if not count % 10000:
-            print(count)
         A[bit_str(s)] = [0] * ncities
         for j in s:
             A[bit_str(s)][j] = min([A_last[bit_str(tuple(set(s) - set([j])))][k] + distances[(k, j)]
